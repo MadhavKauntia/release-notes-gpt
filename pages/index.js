@@ -25,7 +25,7 @@ export default function Home() {
             })
                 .then(res => res.json())
                 .then(json => {
-                    setGeneratedReleaseNotes(json[0].text.replace(/(\r\n|\n|\r)/gm, ""))
+                    setGeneratedReleaseNotes(json[0].text)
                     setLoading(false)
                 })
                 .catch(ex => {
