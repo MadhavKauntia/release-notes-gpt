@@ -11,7 +11,6 @@ export default function Home() {
     const toneChangeHandler = (newTone) => setTone(newTone)
     const handleCommitsChange = (event) => setCommits(event.target.value)
     const handleGenerateReleaseNotes = () => {
-        setLoading(true)
         if(commits === "") {
             alert("Commits cannot be empty.")
         } else {
